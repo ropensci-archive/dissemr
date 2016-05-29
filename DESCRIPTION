@@ -1,7 +1,7 @@
 Package: dissem
 Type: Package
-Title: 'dissem.in' client
-Description: 'dissem.in' client
+Title: 'dissem.in' Client
+Description: 'dissem.in' client. Stuff, things.
 Version: 0.0.1.9000
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")

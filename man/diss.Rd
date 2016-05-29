@@ -25,7 +25,7 @@ dissem.in query
 \dontrun{
 diss("10.1016/j.paid.2009.02.013")
 diss("10.1186/s40687-015-0044-7")
-# diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7")) # not work
+diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
 
 diss(title = "Strange resonances measured in Al+Al collisions at sqrt",
    date = "2015", authors = list(plain = "Lopez, X."))

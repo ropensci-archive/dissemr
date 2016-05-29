@@ -24,9 +24,14 @@ devtools::install_github("ropenscilabs/dissem")
 library("dissem")
 ```
 
-## stuff
+## single DOI
 
 ```{r}
-"aadfadfa"
+diss("10.1016/j.paid.2009.02.013")
 ```
 
+## many DOIs
+
+```{r}
+diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+```
