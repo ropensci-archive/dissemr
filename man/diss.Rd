@@ -15,8 +15,7 @@ diss(doi = NULL, title = NULL, date = NULL, authors = NULL, ...)
 
 \item{authors}{(character) authors}
 
-\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}
-or \code{\link[httr:POST]{httr::POST()}}}
+\item{...}{curl options passed on to \code{\link[crul:HttpClient]{crul::HttpClient()}}}
 }
 \description{
 dissem.in query

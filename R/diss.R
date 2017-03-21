@@ -5,8 +5,7 @@
 #' @param title (character) title, a work title
 #' @param date (character) date, a ISO date
 #' @param authors (character) authors
-#' @param ... curl options passed on to [httr::GET()]
-#' or [httr::POST()]
+#' @param ... curl options passed on to [crul::HttpClient()]
 #' @examples \dontrun{
 #' diss("10.1016/j.paid.2009.02.013")
 #' diss("10.1186/s40687-015-0044-7")
@@ -18,9 +17,6 @@
 #' diss("10.1007/s002200050490")
 #' }
 diss <- function(doi = NULL, title = NULL, date = NULL, authors = NULL, ...) {
-  # if (length(doi) == 1) {
-  #   diss_GET(doi, body = NULL, ...)
-  # } else {
   if (length(doi) > 1) {
     lapply(doi, function(z) {
       structure(diss_POST(path = "query", body = list(doi = z), ...),
@@ -34,7 +30,6 @@ diss <- function(doi = NULL, title = NULL, date = NULL, authors = NULL, ...) {
       class = "dissem"
     )
   }
-  # }
 }
 
 #' @export

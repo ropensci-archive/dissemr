@@ -1,16 +1,18 @@
 cp <- function(x) Filter(Negate(is.null), x)
 
-diss_base <- function() "http://beta.dissem.in/api"
+diss_base <- function() "http://dissem.in"
 
 diss_GET <- function(path = "", args = list(), ...) {
-  x <- httr::GET(file.path(diss_base(), path), query = args, ...)
-  httr::stop_for_status(x)
-  jsonlite::fromJSON(httr::content(x, "text", "UTF-8"))
+  cli <- crul::HttpClient$new(url = diss_base())
+  x <- cli$get(path = file.path("api", path), query = args, ...)
+  x$raise_for_status()
+  jsonlite::fromJSON(x$parse("UTF-8"))
 }
 
 diss_POST <- function(path = "", body, ...) {
-  x <- httr::POST(file.path(diss_base(), path), body = body,
-                  encode = "json", ...)
-  httr::stop_for_status(x)
-  jsonlite::fromJSON(httr::content(x, "text", "UTF-8"))
+  cli <- crul::HttpClient$new(url = diss_base())
+  x <- cli$post(path = file.path("api", path), body = body,
+                encode = "json", ...)
+  x$raise_for_status()
+  jsonlite::fromJSON(x$parse("UTF-8"))
 }
