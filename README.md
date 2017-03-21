@@ -3,6 +3,11 @@ dissem
 
 
 
+[![Project Status: WIP - Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](http://www.repostatus.org/badges/latest/wip.svg)](http://www.repostatus.org/#wip)
+[![Build Status](https://travis-ci.org/ropenscilabs/dissem.svg?branch=master)](https://travis-ci.org/ropenscilabs/dissem)
+[![codecov.io](https://codecov.io/github/ropenscilabs/dissem/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/dissem?branch=master)
+[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/dissem)](https://github.com/metacran/cranlogs.app)
+
 [dissem.in](http://dissem.in/) client
 
 API docs: <http://dev.dissem.in/api.html>
