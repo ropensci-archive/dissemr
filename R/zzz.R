@@ -9,7 +9,8 @@ diss_GET <- function(path = "", args = list(), ...) {
 }
 
 diss_POST <- function(path = "", body, ...) {
-  x <- httr::POST(file.path(diss_base(), path), body = body, encode = "json", ...)
+  x <- httr::POST(file.path(diss_base(), path), body = body,
+                  encode = "json", ...)
   httr::stop_for_status(x)
   jsonlite::fromJSON(httr::content(x, "text", "UTF-8"))
 }

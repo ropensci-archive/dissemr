@@ -2,8 +2,8 @@
 % Please edit documentation in R/dissem-package.R
 \docType{package}
 \name{dissem-package}
-\alias{dissem}
 \alias{dissem-package}
+\alias{dissem}
 \title{dissem}
 \description{
 dissem
@@ -12,4 +12,3 @@ dissem
 Scott Chamberlain \email{myrmecocystus@gmail.com}
 }
 \keyword{package}
-

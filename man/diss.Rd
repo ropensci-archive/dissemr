@@ -15,8 +15,8 @@ diss(doi = NULL, title = NULL, date = NULL, authors = NULL, ...)
 
 \item{authors}{(character) authors}
 
-\item{...}{curl options passed on to \code{\link[httr]{GET}}
-or \code{\link[httr]{POST}}}
+\item{...}{curl options passed on to \code{\link[httr:GET]{httr::GET()}}
+or \code{\link[httr:POST]{httr::POST()}}}
 }
 \description{
 dissem.in query
@@ -33,4 +33,3 @@ diss(title = "Strange resonances measured in Al+Al collisions at sqrt",
 diss("10.1007/s002200050490")
 }
 }
-
