@@ -3,7 +3,9 @@ dissem
 
 
 
-dissem.in client
+[dissem.in](http://dissem.in/) client
+
+API docs: <http://dev.dissem.in/api.html>
 
 ## Install
 
@@ -25,7 +27,7 @@ library("dissem")
 ```r
 diss("10.1016/j.paid.2009.02.013")
 #> <dissemin record>
-#>   No. records: 2
+#>   No. records: 1
 #>   Title: Refining the conceptualization of a future-oriented self-regulatory behavior: Proactive coping
 #>   Type: journal-article
 ```
@@ -37,13 +39,20 @@ diss("10.1016/j.paid.2009.02.013")
 diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
 #> [[1]]
 #> <dissemin record>
-#>   No. records: 2
+#>   No. records: 1
 #>   Title: Refining the conceptualization of a future-oriented self-regulatory behavior: Proactive coping
 #>   Type: journal-article
 #> 
 #> [[2]]
 #> <dissemin record>
-#>   No. records: 3
+#>   No. records: 1
 #>   Title: Proof of the umbral moonshine conjecture
 #>   Type: journal-article
 ```
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/dissem/issues).
+* License: MIT
+* Get citation information for `dissem` in R doing `citation(package = 'dissem')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

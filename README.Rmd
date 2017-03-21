@@ -10,7 +10,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-dissem.in client
+[dissem.in](http://dissem.in/) client
+
+API docs: <http://dev.dissem.in/api.html>
 
 ## Install
 
@@ -35,3 +37,10 @@ diss("10.1016/j.paid.2009.02.013")
 ```{r}
 diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
 ```
+
+## Meta
+
+* Please [report any issues or bugs](https://github.com/ropenscilabs/dissem/issues).
+* License: MIT
+* Get citation information for `dissem` in R doing `citation(package = 'dissem')`
+* Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

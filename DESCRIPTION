@@ -1,7 +1,7 @@
 Package: dissem
 Type: Package
-Title: 'dissem.in' Client
-Description: 'dissem.in' client. Stuff, things.
+Title: Client for 'dissem.in' 'API' for Scholarly Metadata
+Description: 'dissem.in' client.
 Version: 0.0.3.9100
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")
