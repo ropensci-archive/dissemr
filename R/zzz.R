@@ -16,3 +16,12 @@ diss_POST <- function(path = "", body, ...) {
   x$raise_for_status()
   jsonlite::fromJSON(x$parse("UTF-8"))
 }
+
+assert <- function(x, y) {
+  if (!is.null(x)) {
+    if (!class(x) %in% y) {
+      stop(deparse(substitute(x)), " must be of class ",
+           paste0(y, collapse = ", "), call. = FALSE)
+    }
+  }
+}

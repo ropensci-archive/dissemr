@@ -1,10 +1,11 @@
 #' dissem.in query
 #'
 #' @export
-#' @param doi (character) one or more doi's
+#' @param doi (character) one or more DOI's. If you pass more than one DOI,
+#' we do a separate request for each DOI
 #' @param title (character) title, a work title
-#' @param date (character) date, a ISO date
-#' @param authors (character) authors
+#' @param date (character) date, an ISO date
+#' @param authors (list) authors, in a list, see examples
 #' @param ... curl options passed on to [crul::HttpClient()]
 #' @examples \dontrun{
 #' diss("10.1016/j.paid.2009.02.013")
@@ -17,6 +18,11 @@
 #' diss("10.1007/s002200050490")
 #' }
 diss <- function(doi = NULL, title = NULL, date = NULL, authors = NULL, ...) {
+  assert(doi, "character")
+  assert(title, "character")
+  assert(date, c("character", "Date"))
+  assert(authors, "list")
+
   if (length(doi) > 1) {
     lapply(doi, function(z) {
       structure(diss_POST(path = "query", body = list(doi = z), ...),
