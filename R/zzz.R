@@ -1,6 +1,6 @@
 cp <- function(x) Filter(Negate(is.null), x)
 
-diss_base <- function() "http://dissem.in"
+diss_base <- function() "https://dissem.in"
 
 diss_GET <- function(path = "", args = list(), ...) {
   cli <- crul::HttpClient$new(url = diss_base())

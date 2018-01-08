@@ -1,8 +1,8 @@
 Package: dissem
 Type: Package
-Title: Client for 'dissem.in' 'API' for Scholarly Metadata
-Description: 'dissem.in' client.
-Version: 0.0.3.9100
+Title: Client for 'dissem.in' API for Scholarly Metadata
+Description: 'dissem.in' client (<https://dissem.in/>).
+Version: 0.0.5.9100
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")
 License: MIT + file LICENSE
@@ -10,10 +10,8 @@ URL: https://github.com/ropenscilabs/dissem
 BugReports: https://github.com/ropenscilabs/dissem/issues
 Roxygen: list(markdown = TRUE)
 Imports:
-    crul,
+    crul (>= 0.4.0),
     jsonlite
 Suggests:
-    roxygen2 (>= 6.0.1),
-    testthat,
-    covr
+    testthat
 RoxygenNote: 6.0.1

@@ -15,9 +15,9 @@ knitr::opts_chunk$set(
 [![codecov.io](https://codecov.io/github/ropenscilabs/dissem/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/dissem?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/dissem)](https://github.com/metacran/cranlogs.app)
 
-[dissem.in](http://dissem.in/) client
+[dissem.in](https://dissem.in/) client
 
-API docs: <http://dev.dissem.in/api.html>
+API docs: <https://dev.dissem.in/api.html>
 
 ## Install
 
@@ -34,13 +34,19 @@ library("dissem")
 ## single DOI
 
 ```{r}
-diss("10.1016/j.paid.2009.02.013")
+diss_dois("10.1016/j.paid.2009.02.013")
 ```
 
 ## many DOIs
 
 ```{r}
-diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+diss_dois(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+```
+
+## search
+
+```{r}
+diss_search(query = "cellular biology")
 ```
 
 ## Meta
