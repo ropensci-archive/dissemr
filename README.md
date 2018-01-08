@@ -8,9 +8,9 @@ dissem
 [![codecov.io](https://codecov.io/github/ropenscilabs/dissem/coverage.svg?branch=master)](https://codecov.io/github/ropenscilabs/dissem?branch=master)
 [![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/dissem)](https://github.com/metacran/cranlogs.app)
 
-[dissem.in](http://dissem.in/) client
+[dissem.in](https://dissem.in/) client
 
-API docs: <http://dev.dissem.in/api.html>
+API docs: <https://dev.dissem.in/api.html>
 
 ## Install
 
@@ -30,10 +30,11 @@ library("dissem")
 
 
 ```r
-diss("10.1016/j.paid.2009.02.013")
+diss_dois("10.1016/j.paid.2009.02.013")
+#> [[1]]
 #> <dissemin record>
-#>   No. records: 1
-#>   Title: Refining the conceptualization of a future-oriented self-regulatory behavior: Proactive coping
+#>   No. records: 5
+#>   Title: Refining the Conceptualization of an Important Future-Oriented Self-Regulatory Behavior: Proactive Coping
 #>   Type: journal-article
 ```
 
@@ -41,17 +42,53 @@ diss("10.1016/j.paid.2009.02.013")
 
 
 ```r
-diss(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+diss_dois(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
 #> [[1]]
 #> <dissemin record>
-#>   No. records: 1
-#>   Title: Refining the conceptualization of a future-oriented self-regulatory behavior: Proactive coping
+#>   No. records: 5
+#>   Title: Refining the Conceptualization of an Important Future-Oriented Self-Regulatory Behavior: Proactive Coping
 #>   Type: journal-article
 #> 
 #> [[2]]
 #> <dissemin record>
-#>   No. records: 1
-#>   Title: Proof of the umbral moonshine conjecture
+#>   No. records: 2
+#>   Title: Proof of the Umbral Moonshine Conjecture
+#>   Type: journal-article
+```
+
+## search
+
+
+```r
+(res <- diss_search(query = "cellular biology"))
+#> <dissemin records>
+#>   Papers found: 1990
+#>   Papers returned: 20
+#>   (see `x$papers` for results)
+#>   Stats: 
+#>        id value                          label
+#> 1      oa   118   Available from the publisher
+#> 2      ok   511      Available from the author
+#> 3 couldbe   858 Could be shared by the authors
+#> 4     unk   465 Unknown/unclear sharing policy
+#> 5  closed    38      Publisher forbids sharing
+```
+
+dig into individual results
+
+
+```r
+res$papers[1:2]
+#> [[1]]
+#> <dissemin record>
+#>   No. records: 2
+#>   Title: Molecular and cellular analysis of immunity in the phytoplasma vector Euscelidius variegatus: exploiting immunity to improve biological control strategies
+#>   Type: journal-article
+#> 
+#> [[2]]
+#> <dissemin record>
+#>   No. records: 2
+#>   Title: A cellular model for the investigation of depot-specific human adipocyte biology
 #>   Type: journal-article
 ```
 

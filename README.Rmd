@@ -46,7 +46,13 @@ diss_dois(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
 ## search
 
 ```{r}
-diss_search(query = "cellular biology")
+(res <- diss_search(query = "cellular biology"))
+```
+
+dig into individual results
+
+```{r}
+res$papers[1:2]
 ```
 
 ## Meta

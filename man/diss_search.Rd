@@ -16,6 +16,6 @@ dissem.in search
 }
 \examples{
 \dontrun{
-diss_search(query = "Strange resonances measured in Al+Al collisions at sqrt")
+diss_search(query = "cellular biology")
 }
 }

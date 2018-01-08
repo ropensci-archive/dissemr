@@ -19,6 +19,11 @@ dissem.in fetch data by DOIs
 \dontrun{
 diss_dois("10.1016/j.paid.2009.02.013")
 diss_dois("10.1186/s40687-015-0044-7")
-diss_dois(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+res <- diss_dois(c("10.1016/j.paid.2009.02.013", "10.1186/s40687-015-0044-7"))
+res
+res[[1]]
+res[[2]]
+res[[2]]$paper
+res[[2]]$paper$records
 }
 }
