@@ -1,2 +1,2 @@
 library("testthat")
-test_check("dissem")
+test_check("dissemr")

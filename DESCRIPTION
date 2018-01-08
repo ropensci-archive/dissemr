@@ -1,4 +1,4 @@
-Package: dissem
+Package: dissemr
 Type: Package
 Title: Client for 'dissem.in' API for Scholarly Metadata
 Description: 'dissem.in' client (<https://dissem.in/>).
@@ -6,8 +6,8 @@ Version: 0.0.6.9100
 Authors@R: person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com")
 License: MIT + file LICENSE
-URL: https://github.com/ropenscilabs/dissem
-BugReports: https://github.com/ropenscilabs/dissem/issues
+URL: https://github.com/ropenscilabs/dissemr
+BugReports: https://github.com/ropenscilabs/dissemr/issues
 Roxygen: list(markdown = TRUE)
 Imports:
     crul (>= 0.4.0),
